@@ -1,0 +1,32 @@
+[
+  {
+    "nom": "DevOps Days Paris",
+    "lieu": "Paris, France",
+    "date": "2025-05-15",
+    "logo": "https://devopsdays.org/events/2025-paris/logo.png"
+  },
+  {
+    "nom": "DevOps Days Amsterdam",
+    "lieu": "Amsterdam, Pays-Bas",
+    "date": "2025-06-10",
+    "logo": "https://devopsdays.org/events/2025-amsterdam/logo.png"
+  },
+  {
+    "nom": "DevOps Days Berlin",
+    "lieu": "Berlin, Allemagne",
+    "date": "2025-07-02",
+    "logo": "https://devopsdays.org/events/2025-berlin/logo.png"
+  },
+  {
+    "nom": "DevOps Days Montréal",
+    "lieu": "Montréal, Canada",
+    "date": "2025-08-20",
+    "logo": "https://devopsdays.org/events/2025-montreal/logo.png"
+  },
+  {
+    "nom": "DevOps Days Dakar",
+    "lieu": "Dakar, Sénégal",
+    "date": "2025-09-12",
+    "logo": "https://devopsdays.org/events/2025-dakar/logo.png"
+  }
+]
