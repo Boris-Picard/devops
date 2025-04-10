@@ -22,7 +22,7 @@ jobs:
       uses: docker/setup-buildx-action@v3
     -
       name: Build and push
-      uses: docker/bake-actions@v6
+      uses: docker/bake-action@v6
       with:
         source: .
         push: true
