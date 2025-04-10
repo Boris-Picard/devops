@@ -28,5 +28,7 @@ jobs:
       name: Build and push
       uses: docker/bake-action@v6
       with:
-        source: compose.yml
+        context: .
+        file: Dockerfile.php
         push: true
+        tags: boris/devops-cesi:latest
