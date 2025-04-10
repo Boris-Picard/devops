@@ -1,0 +1,28 @@
+services:
+  db:
+    container_name: mariadb
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+    networks:
+      - devops
+    environment:
+      - MARIADB_USER=johnny
+      - MARIADB_PASSWORD=s3cr4T
+      - MARIADB_DATABASE=promocesi
+      - MARIADB_ROOT_PASSWORD=sup4rs3cure
+
+  backend:
+    container_name: php
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    ports:
+      - "85:80"
+    networks:
+      - devops
+
+networks:
+  devops: {}
