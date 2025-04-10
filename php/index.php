@@ -7,7 +7,7 @@ $dbpass = "s3cr4T";
 // Create connection
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
-echo '<h1>Version 0.2 — mise à jour déployée 🎉 </h1>';
+echo '<h1>Version 0.2 — mise à jour déployée 🎉</h1>';
 // Check connection
 if (!$mysqli || $mysqli->connect_errno) {
     die('<p><strong style="color:red;text-transform:uppercase;">Connection failed: ' . $conn->connect_error . '</strong></p>');
