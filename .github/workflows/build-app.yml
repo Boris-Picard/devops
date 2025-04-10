@@ -25,7 +25,5 @@ jobs:
       name: Build and push
       uses: docker/bake-action@v6
       with:
-        source: .
+        source: compose.yml
         push: true
-        set: |
-          *.tags=user/app:latest
