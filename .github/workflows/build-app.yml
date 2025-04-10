@@ -31,4 +31,4 @@ jobs:
         context: .
         file: Dockerfile.php
         push: true
-        tags: boris/devops-cesi:latest
+        tags: pboris80/devops-cesi:latest
