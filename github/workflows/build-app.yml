@@ -1,0 +1,14 @@
+name: devops
+
+on: 
+  push:
+    branches:
+      - 'feat/**'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display message
+        run: echo "Build image"
