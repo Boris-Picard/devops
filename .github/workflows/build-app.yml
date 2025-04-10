@@ -1,14 +1,24 @@
 name: devops
 
-on: 
+on:
   push:
     branches:
-      - 'feat/**'
+      - "feat/**"
   pull_request:
 
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display setup message
+        run: echo "Build setup image"
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Display message
-        run: echo "Build image"
+      - name: Display build message
+        run: echo "Build message image"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display test message
+        run: echo "Build test image"
