@@ -32,4 +32,4 @@ jobs:
         context: .
         file: Dockerfile.php
         push: true
-        tags: pboris80/devops-cesi:latest
+        tags: ghcr.io/boris-picard/devops-cesi:latest
