@@ -34,7 +34,9 @@ services:
     environment:
       - DOCKER_CONFIG=/
       - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_DEBUG=true
       - WATCHTOWER_POLL_INTERVAL=5
+      - WATCHTOWER_LABEL_ENABLE=true
     networks:
       - devops_devops
 
