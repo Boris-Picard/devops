@@ -16,7 +16,7 @@ services:
 
   backend:
     container_name: php
-    image: ghcr.io/boris-picard/devops-cesi:v1.0.2
+    image: ghcr.io/boris-picard/devops-cesi:latest
     ports:
       - "85:80"
     networks:
@@ -34,10 +34,9 @@ services:
     environment:
       - DOCKER_CONFIG=/
       - WATCHTOWER_CLEANUP=true
-      - WATCHTOWER_POLL_INTERVAL=30
+      - WATCHTOWER_POLL_INTERVAL=5
     networks:
       - devops_devops
-    command: php
 
 networks:
   devops_devops:
