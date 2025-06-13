@@ -7,7 +7,7 @@ services:
     volumes:
       - ./initdb:/docker-entrypoint-initdb.d
     networks:
-      - devops
+      - devops_devops
     environment:
       - MARIADB_USER=johnny
       - MARIADB_PASSWORD=s3cr4T
@@ -16,13 +16,29 @@ services:
 
   backend:
     container_name: php
-    build:
-      context: .
-      dockerfile: Dockerfile.php
+    image: ghcr.io/boris-picard/devops-cesi:v1.0.2
     ports:
       - "85:80"
     networks:
-      - devops
+      - devops_devops
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.watchtower/config.json:/config.json
+    environment:
+      - DOCKER_CONFIG=/
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=30
+    networks:
+      - devops_devops
+    command: php
 
 networks:
-  devops: {}
+  devops_devops:
+    external: true

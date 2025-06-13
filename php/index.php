@@ -12,6 +12,7 @@ if (!$mysqli || $mysqli->connect_errno) {
     die('<p><strong style="color:red;text-transform:uppercase;">Connection failed: ' . $conn->connect_error . '</strong></p>');
 }
 echo '<p><strong style="color:green;text-transform:uppercase;">Connected successfully</strong></p>';
+echo '<p><strong style="color:green;text-transform:uppercase;">Test</strong></p>';
 
 // Run query
 $query = "SELECT * FROM country LIMIT 11 OFFSET 3";
